@@ -6,7 +6,7 @@ import axios from 'axios';
 
 class App extends React.Component {
     state = {
-        innercomp: <textarea rows="4" cols="50" id="textinput" />,
+        innercomp: <textarea rows="8" cols="80" id="textinput" />,
         mode: "text",
         sentimentOutput: [],
         sentiment: true
@@ -16,7 +16,7 @@ class App extends React.Component {
         document.getElementById("textinput").value = "";
         if (this.state.mode === "url") {
             this.setState({
-                innercomp: <textarea rows="4" cols="50" id="textinput" />,
+                innercomp: <textarea rows="4" cols="80" id="textinput" />,
                 mode: "text",
                 sentimentOutput: [],
                 sentiment: true
@@ -28,7 +28,7 @@ class App extends React.Component {
         document.getElementById("textinput").value = "";
         if (this.state.mode === "text") {
             this.setState({
-                innercomp: <textarea rows="1" cols="50" id="textinput" />,
+                innercomp: <textarea rows="8" cols="80" id="textinput" />,
                 mode: "url",
                 sentimentOutput: [],
                 sentiment: true
@@ -51,13 +51,13 @@ class App extends React.Component {
             //Include code here to check the sentiment and fomrat the data accordingly
 
             this.setState({ sentimentOutput: response.data.score });
-            let output = response.data.score;
+            let output = response.data.label;
             if (response.data.label === "positive") {
-                output = <div style={{ color: "green", fontSize: 20 }}>{response.data.score}</div>
+                output = <div style={{ color: "green", fontSize: 30 }}>{response.data.label}</div>
             } else if (response.data.label === "negative") {
-                output = <div style={{ color: "red", fontSize: 20 }}>{response.data.score}</div>
+                output = <div style={{ color: "red", fontSize: 20 }}>{response.data.label}</div>
             } else {
-                output = <div style={{ color: "orange", fontSize: 20 }}>{response.data.score}</div>
+                output = <div style={{ color: "gold", fontSize: 20 }}>{response.data.label}</div>
             }
             this.setState({ sentimentOutput: output });
         });
@@ -86,6 +86,8 @@ class App extends React.Component {
                 <button className="btn btn-info" onClick={this.renderTextArea}>Text</button>
                 <button className="btn btn-dark" onClick={this.renderTextBox}>URL</button>
                 <br /><br />
+                <p>Remember to click "Text" or "URL" button above before input, otherwise desired result cannot be shown.</p>
+                <p>The result will be rendered in about 5-10 seconds, please kindly wait patiently.</p>
                 {this.state.innercomp}
                 <br />
                 <button className="btn-primary" onClick={this.sendForSentimentAnalysis}>Analyze Sentiment</button>
