@@ -2,7 +2,7 @@
 
 [![Credy Badges](https://images.credly.com/size/110x110/images/73c1a67e-b3e8-44f1-a049-a91532e4f19c/Developing_Cloud_Apps_with_Node.js_and_React.png)](https://www.credly.com/users/rauljrz)
 
-[![IBM Coursera](https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=1&w=80&h=80)](https://coursera.org/share/d6e4fc8849027aee0114f6fcefd038dd)
+[![IBM Coursera](https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/d9/0d7c51354a48d2af08be185b6dcbc2/IBM-Logo-White.png?auto=format%2Ccompress&dpr=1&w=220&h=50)](https://coursera.org/share/d6e4fc8849027aee0114f6fcefd038dd)
 
 
 ### Documents and API used to create my Final Project for IBM Developing Cloud Apps with Node.js and React (Completed January 2022)
